@@ -12,6 +12,7 @@ import ItemList from '../item-list';
 import Row from '../row';
 import ItemDetails, {Record} from '../item-details/item-details';
 import ErrorBoundry from '../error-boundry/error-boundry';
+import { PersonDetails } from '../sw-components';
 
 export default class  App extends Component {
 
@@ -80,6 +81,17 @@ export default class  App extends Component {
   <div className="stardb-app">
             <Header />
             {planet}
+
+            <PersonDetails itemId={11} />
+            <StarshipDetails itemId={9} />
+            <PlanetDetails itemId={5} />
+
+
+            <PersonList/>
+
+<StarhipList/>
+
+<PlanetList/>
 
             <Row
             left={personDetails}
