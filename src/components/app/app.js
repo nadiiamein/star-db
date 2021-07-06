@@ -13,7 +13,7 @@ import Row from '../row';
 import ItemDetails, {Record} from '../item-details/item-details';
 import ErrorBoundry from '../error-boundry/error-boundry';
 import { PersonDetails } from '../sw-components';
-
+import { SwapiServiseProvider } from '../svapi-service-context';
 export default class  App extends Component {
 
     swapiService = new SwapiService();

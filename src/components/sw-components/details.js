@@ -1,48 +1,9 @@
-const PersonDetails = () => {};
-const PlanetDetails = () => {};
 import React from 'react';
 import ItemDetails from '../item-details/item-details';
-import SwapiService from '../../services/swapi-service';
+import { SwapiServiseConsumer } from '../svapi-service-context';
 
-const swapiService = new SwapiService();
 
-const {
-    getPerson,
-    getPlanet,
-    getStarship,
-    getPersonImage,
-    getPlanetImage,
-    getStarshipImage
-} = swapiService;
 
-const StarshipDetails = (itemId) => {
-
-    return (
-        <ItemDetails
-        itemId={itemId}
-        getData={getPerson}
-        getImageUrl={getPersonImage} >
-
-        <Record field="gender" label="Gender"/>
-       <Record field="eyeColor" label="Eye Color"/> 
-      </ItemDetails>
-    );
-};
-
-const PlanetDetails = ({itemId}) => {
-    return (
-        <ItemDetails
-    itemId={itemId}
-getData={getPlanet}
-getImageUrl={getPlanetImage}> 
-<Record field="population" label="Population"/>
-<Record field="rotationPeriod" label="rotation Period"/> 
-<Record field="diameter" label="Diameter"/> 
-
-</ItemDetails> 
-  
-        );
-};
 
 const StarshipDetails = () => {
   return (
