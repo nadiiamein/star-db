@@ -21,15 +21,17 @@ export default class ItemDetails extends Component {
     state = {
         item: null,
         image: null
-
     };
+
 
     componentDidMount() {
         this.updateItem();
     }
 
     componentDidUpdate(prevProps) {
-        if(this.props.itemId !== prevProps.itemId) {
+        if(this.props.itemId !== prevProps.itemId ||
+            this.props.detData !== prevProps.getData ||
+            this.props.getImageUrl !== prevProps.getImageUrl) {
             this.updateItem();
         }
     }
@@ -59,9 +61,8 @@ const { name} = item;
 
 
         return(
-            <div className="person-details card">
-                <img className="item-image"
-           
+            <div className="item-details card">
+                <img className="item-image"           
            src = {image}
                 alt = "item" />
 
@@ -76,6 +77,6 @@ return React.cloneElement(child, {item});
                     <ErrorButton/>
                 </div>
             </div>
-        )
+        );
     }
 }

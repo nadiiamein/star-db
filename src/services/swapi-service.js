@@ -1,5 +1,3 @@
-
-
 export default class SwapiService {
     _apiBase = 'https://swapi.dev/api'; 
     _imageBase = 'https://starwars-visualguide.com/assets/img';
@@ -44,13 +42,13 @@ export default class SwapiService {
     return this._transformStarship(starship);
   };
 
-  getPersonImage = () => {
+  getPersonImage = (id) => {
     return `${this._imageBase}/characters/${id}.jpg`
   };
-  getStarshipImage = () => {
+  getStarshipImage = (id) => {
     return `${this._imageBase}/starhips/${id}.jpg`
   };
-  getPlanetImage = () => {
+  getPlanetImage = (id) => {
     return `${this._imageBase}/planets/${id}.jpg`
   };
 
